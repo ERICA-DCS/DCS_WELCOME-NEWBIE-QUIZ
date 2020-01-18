@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1번 문제</title>
+    <link rel="stylesheet" href="../styles/problem-style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button[name='check-answer-btn']").click(function(){
+          var x = document.getElementById('dugudugu');
+          x.play();
+          setTimeout(function() {
+            $("h3[name='answer']").css('visibility', 'visible');
+            var z = document.getElementById('busker');
+            z.play();
+          }, 2400);
+
+        });
+        $("button[name='check-prize-btn']").click(function(){
+          var x = document.getElementById('dugudugu');
+          x.play();
+          setTimeout(function() {
+            $("h3[name='prize']").css('visibility', 'visible');
+            var y = document.getElementById('andae');
+            y.play();
+          }, 2400);
+
+        });
+        $("button[name='do-play-btn']").click(function(){
+          var x = document.getElementById('amadu');
+          x.play();
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2>10번 문제</h2>
+    </header>
+
+    <article class="contents">
+      <h3 name="problem">[노래가사 보고 제목, 가수 맞추기!]</br>eotteon gyejeol-i neoleul uyeonhilado neoleul majuchige halkka?</br>
+nan idaelo aswiwohada neoleul
+balaman bodeon neoleul gidalimyeonseo</h3>
+      <!--<button type="button" name="do-play-btn">노래재생</button>-->
+      <button type="button" name="check-answer-btn">정답확인</button>
+      <button type="button" name="check-prize-btn">상품확인</button>
+      <h3 name="answer" style="visibility:hidden">정답은!! </br>제목 : 흔들리는 꽃들 속 에서 네 샴푸 향이 느껴진 거야, 가수 : 장범준 입니다!</h3>
+      <h3 name="prize" style="visibility:hidden">상품은!!</br>꽝 입니다! 다음 기회에 도전하세요...</h3>
+      <audio id="amadu" src="../sounds/amadu.mp3">
+      </audio>
+      <audio id="dugudugu" src="../sounds/dugudugu.mp3">
+      </audio>
+      <audio id="andae" src="../sounds/nono.mp3">
+      </audio>
+      <audio id="busker" src="../sounds/buskerbusker.mp3">
+
+      </audio>
+    </article>
+
+    <footer>
+
+      <img src="../images/HYon2.0.png" alt="">
+
+    </footer>
+  </body>
+</html>

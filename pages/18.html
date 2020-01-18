@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1번 문제</title>
+    <link rel="stylesheet" href="../styles/problem-style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button[name='check-answer-btn']").click(function(){
+          var x = document.getElementById('dugudugu');
+          x.play();
+          setTimeout(function() {
+            $("h3[name='answer']").css('visibility', 'visible');
+            var y = document.getElementById('beautiful_answer');
+            y.play();
+          }, 2400);
+
+        });
+        $("button[name='check-prize-btn']").click(function(){
+          var x = document.getElementById('dugudugu');
+          x.play();
+          setTimeout(function() {
+            $("h3[name='prize']").css('visibility', 'visible');
+            var y = document.getElementById('correct');
+            y.play();
+          }, 2400);
+
+        });
+        var x = document.getElementById('sound');
+        $("button[name='do-play-btn']").click(function(){
+          x.play();
+        });
+        $("button[name='do-stop-btn']").click(function(){
+          x.pause();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2>18번 문제</h2>
+
+    </header>
+
+    <article class="contents">
+      <h3 name="problem">[전주만 짧게 듣고 노래제목 맞추기] </h3>
+
+      <button type="button" name="do-play-btn">▶ 문제음악 재생</button>
+      <button type="button" name="do-stop-btn">■ 문제음악 정지</button>
+      <button type="button" name="check-answer-btn">정답확인</button>
+      <button type="button" name="check-prize-btn">상품확인</button>
+
+      <h3 name="answer" style="visibility:hidden">정답은!! 크러쉬(Crush)의 Beautiful 입니다!</h3>
+      <h3 name="prize" style="visibility:hidden">상품은!! 디퓨저 입니다!</h3>
+      <audio id="sound" src="../sounds/beautiful.mp3">
+      </audio>
+      <audio id="dugudugu" src="../sounds/dugudugu.mp3">
+      </audio>
+      <audio id="beautiful_answer" src="../sounds/beautiful_answer.mp3">
+
+      </audio>
+      <audio id="andae" src="../sounds/andaenunjul.mp3">
+      </audio>
+      <audio id="correct" src="../sounds/correct_music.mp3">
+
+      </audio>
+    </article>
+
+    <footer>
+
+      <img src="../images/HYon2.0.png" alt="">
+
+    </footer>
+  </body>
+</html>

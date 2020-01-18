@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1번 문제</title>
+    <link rel="stylesheet" href="../styles/problem-style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button[name='check-answer-btn']").click(function(){
+          var x = document.getElementById('dugudugu');
+          x.play();
+          setTimeout(function() {
+            $("h3[name='answer']").css('visibility', 'visible');
+          }, 2400);
+
+        });
+        $("button[name='check-prize-btn']").click(function(){
+          var x = document.getElementById('dugudugu');
+          x.play();
+          setTimeout(function() {
+            $("h3[name='prize']").css('visibility', 'visible');
+            var y = document.getElementById('andae');
+            y.play();
+          }, 2400);
+
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2>4번 문제</h2>
+    </header>
+
+    <article class="contents">
+      <h3 name="problem">제4공학관에 위치하고 있는 소프트웨어융합대학만을 위한 실습실 이름은?</br>HINT) SOOOO 룸</h3>
+      <button type="button" name="check-answer-btn">정답확인</button>
+      <button type="button" name="check-prize-btn">상품확인</button>
+      <h3 name="answer" style="visibility:hidden">정답은!! SMASH 룸입니다!</h3>
+      <h3 name="prize" style="visibility:hidden">상품은!! 꽝 입니다! 다음 기회에 도전하세요...</h3>
+      <audio id="dugudugu" src="../sounds/dugudugu.mp3">
+      </audio>
+      <audio id="andae" src="../sounds/thatsnono.mp3">
+      </audio>
+    </article>
+
+    <footer>
+
+      <img src="../images/HYon2.0.png" alt="">
+
+    </footer>
+  </body>
+</html>
